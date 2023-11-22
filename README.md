@@ -1,1 +1,2 @@
-[![Build status](https://ci.appveyor.com/api/projects/status/vj1d96smnn4bh29a?svg=true)](https://ci.appveyor.com/project/khomiakovnn/forms)
+[![Build status](https://ci.appveyor.com/api/projects/status/6sps0fhcrylljig8?svg=true)](https://ci.appveyor.com/project/khomiakovnn/dnd)
+
