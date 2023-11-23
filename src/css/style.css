@@ -1,7 +1,7 @@
 body {
     font-family: Arial, sans-serif;
-    background-color: #3498db; /* Голубой фон для всего экрана */
-    margin: 0; /* Убираем отступы по умолчанию */
+    background-color: #3498db;
+    margin: 0;
 }
 
 .board {
@@ -9,36 +9,44 @@ body {
 }
 
 .column {
+    align-self: flex-start;
     width: 300px;
-    margin: 10px; /* Одинаковый отступ по верхнему, правому, нижнему и левому краям */
-    background-color: #f2f2f2; /* Серый фон для столбцов */
+    margin: 10px;
+    background-color: #f2f2f2;
     border-radius: 5px;
     overflow: hidden;
 }
 
 .column-header {
-    background-color: #cacaca; /* Обновлен цвет фона заголовка колонки */
-    color: #464646; /* Обновлен цвет шрифта заголовка колонки */
+    background-color: #cacaca;
+    color: #464646;
     padding: 10px;
-    text-align: left; /* Выравнивание по левому краю */
-    font-weight: bold; /* Шрифт жирным */
+    text-align: left;
+    font-weight: bold;
 }
 
 .cards-container {
     padding: 10px;
 }
 
+.cross {
+    display: none;
+    position: absolute;
+    text-align: center;
+    color: #e42121;
+    border: 1px solid #000000;
+    border-radius: 5px;
+    width: 21px;
+    height: 21px;
+}
+
 .card {
-    background-color: #fff; /* Цвет фона карточек */
+    background-color: #fff;
     border: 1px solid #ccc;
     padding: 10px;
     margin-bottom: 10px;
     border-radius: 5px;
-    font-size: 16px; /* Размер шрифта текста карточки */
-}
-
-.add-card-form {
-    display: none;
+    font-size: 16px;
 }
 
 .add-card-btn {
