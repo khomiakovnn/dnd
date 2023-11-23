@@ -1,0 +1,52 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #3498db; /* Голубой фон для всего экрана */
+    margin: 0; /* Убираем отступы по умолчанию */
+}
+
+.board {
+    display: flex;
+}
+
+.column {
+    width: 300px;
+    margin: 10px; /* Одинаковый отступ по верхнему, правому, нижнему и левому краям */
+    background-color: #f2f2f2; /* Серый фон для столбцов */
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.column-header {
+    background-color: #cacaca; /* Обновлен цвет фона заголовка колонки */
+    color: #464646; /* Обновлен цвет шрифта заголовка колонки */
+    padding: 10px;
+    text-align: left; /* Выравнивание по левому краю */
+    font-weight: bold; /* Шрифт жирным */
+}
+
+.cards-container {
+    padding: 10px;
+}
+
+.card {
+    background-color: #fff; /* Цвет фона карточек */
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    font-size: 16px; /* Размер шрифта текста карточки */
+}
+
+.add-card-form {
+    display: none;
+}
+
+.add-card-btn {
+    cursor: pointer;
+    color: #3498db;
+    margin: 10px;
+}
+
+.add-card-btn:hover {
+    text-decoration: underline;
+}
