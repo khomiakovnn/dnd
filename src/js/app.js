@@ -3,13 +3,17 @@ document.addEventListener('DOMContentLoaded', function () {
     delElement.textContent = '✖';
     delElement.className = 'cross';
     this.body.appendChild(delElement);
+    delElement.addEventListener('click', function (event) {
+        var x = event.clientX;
+        var y = event.clientY;
+        delElement.style.display = 'none';
+        var clickedElement = document.elementFromPoint(x, y);
+        clickedElement.remove();
+    });
 
     var cards = document.querySelectorAll('.card');
     cards.forEach(function (card) {
 
-        // delElement.addEventListener('click', () => {
-        //     console.log('click');
-        })
         card.addEventListener('mouseover', () => {
             const crossRect = card.getBoundingClientRect();
             delElement.style.top = crossRect.top + 2 + 'px';
@@ -52,6 +56,4 @@ document.addEventListener('DOMContentLoaded', function () {
             })
         }
     }
-
-    
 });
