@@ -104,10 +104,16 @@ document.addEventListener('DOMContentLoaded', function () {
     
         card.addEventListener('dragover', function (event) {
             event.preventDefault();
+            const previousSibling = card.previousElementSibling;
+            if (previousSibling == null || !previousSibling.classList.contains("empty-placeholder")) {
+                addPlaceholder(card);
+            }
         });
     
         card.addEventListener('dragleave', function () {
             delElement.style.display = 'block';
+            const placeholder = document.querySelector('.empty-placeholder');
+            placeholder.remove();
         });
     
         card.addEventListener('drop', function () {
@@ -118,6 +124,8 @@ document.addEventListener('DOMContentLoaded', function () {
                     cardsContainer.insertBefore(draggedElement, this);
                 }
             }
+            const placeholder = document.querySelector('.empty-placeholder');
+            placeholder.remove();
             delElement.style.display = 'none';
             saveCards();
             draggedElement = null;
@@ -184,5 +192,12 @@ document.addEventListener('DOMContentLoaded', function () {
                 });
             }
         }
+    }
+
+    function addPlaceholder(card) {
+        const emptyPlaceholder = document.createElement('div');
+        emptyPlaceholder.className = 'empty-placeholder';
+        const cardsContainer = card.parentElement;
+        cardsContainer.insertBefore(emptyPlaceholder, card);
     }
 });
