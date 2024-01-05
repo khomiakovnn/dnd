@@ -3,6 +3,9 @@
   "version": "1.0.0",
   "main": "index.js",
   "repository": "git@github.com:khomiakovnn/dnd.git",
+  "scripts": {
+    "build": "webpack --config webpack.config.js"
+  },
   "author": "Nikolay Khomiakov <nikolay.khomiakov@gmail.com>",
   "license": "MIT",
   "dependencies": {
